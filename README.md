@@ -13,7 +13,7 @@ composer install
 
 # Installation de la base de donnée
 php bin/console doctrine:database:create
-php bin/console doctrine:migrations:migrate
+php bin/console doctrine:migrations:migrate -n
 
 # Peuplement de la base de donnée
 php bin/console doctrine:fixtures:load -n
