@@ -48,9 +48,9 @@ class StudentController extends AbstractController
         $repository = $em->getRepository(Rating::class);
         $ratingAvg = $repository->getRatingAvg();
 
-        if (!$ratingAvg) {
+        if (is_null($ratingAvg['average'])) {
             throw $this->createNotFoundException(
-                'No rating founds'
+                'No ratings founds'
             );
         }
 

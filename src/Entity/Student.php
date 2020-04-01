@@ -42,7 +42,6 @@ class Student
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Rating", mappedBy="student")
-     * @ORM\JoinColumn()
      * @ApiSubresource
      */
     private $ratings;
